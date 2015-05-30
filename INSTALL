@@ -1,0 +1,8 @@
+$ sudo npm install -g node-red
+$ mkdir -p ~/.node-red/node_modules
+$ npm install --prefix ~/.node-red node-red-contrib-bean
+$ node-red
+in browser: http://localhost:1880
+
+1. copy: [{"id":"4f7a7d17.b08584","type":"bean","name":"Bean","uuid":"","connectiontype":"constant","connectiontimeout":"0"},{"id":"834c1bf7.2d02c8","type":"bean serial","name":"","bean":"4f7a7d17.b08584","newline":"\\n","bin":"false","out":"char","addchar":true,"x":282,"y":359,"z":"211a65a2.143ae2","wires":[["cb59342c.7358d"]]}]
+2. paste in: import > clipboard
