@@ -14,8 +14,8 @@ BreathingVisualisation vis;
 
 void setup() {
   size(width,height);
-  //size(displayWidth, displayHeight);
-  //LINE_WIDTH = displayWidth
+  size(displayWidth, displayHeight);
+  LINE_WIDTH = displayWidth;
   br = new Breathing();
   vis = new BreathingVisualisation(br, LINE_WIDTH, LINE_HEIGHT, HISTORY );
 }
@@ -41,5 +41,5 @@ void sleep(int duration) {
 
 // return true to automatically start full screen
 boolean sketchFullScreen() {
-  return false;
+  return true;
 }
