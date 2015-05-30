@@ -19,15 +19,7 @@ void loop(){
   temperature = Bean.getTemperature();
   analogPinValue0 = analogRead(analogPin0);
   analogPinValue1 = analogRead(analogPin1);
-  Serial.print(batteryLevel);
-  Serial.print(",");
-  Serial.print(batteryVoltage);
-  Serial.print(",");
-  Serial.print(temperature);
-  Serial.print(",");
-  Serial.print(analogPinValue0);
-  Serial.print(",");
-  Serial.print(analogPinValue1);
+  Serial.print(batteryLevel.",".batteryVoltage.",".temperature.",".analogPinValue0.",".analogPinValue1);
   Serial.print("\n");
   Bean.sleep(10000);
 }
