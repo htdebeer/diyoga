@@ -17,7 +17,9 @@ void setup() {
   size(width,height);
   //size(displayWidth, displayHeight);
   //LINE_WIDTH = displayWidth;
-  br = new Breathing();
+  int[] expansion_domain = {0, 500};
+  int[] expansion_range = {0, height};
+  br = new Breathing(expansion_domain, expansion_range );
   vis = new BreathingVisualisation(br, LINE_WIDTH, LINE_HEIGHT, HISTORY );
 }
 
