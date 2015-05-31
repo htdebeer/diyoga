@@ -8,10 +8,23 @@ class Breathing {
   int number_of_breaths = 0;
   int max_depth = 0;
   
-  Breathing() {
+  int MIN = 0;
+  int MAX = 1;
+  int[] DOMAIN;
+  int[] RANGE;
+  
+  // Measurements in domain will be mapped to range
+  Breathing(int[] domain, int[] range) {
+    DOMAIN = domain;
+    RANGE = range;
   }
   
-  int measure(int expansion) {
+  int map(int expansion) {
+    return expansion * ((DOMAIN[MAX] - DOMAIN[MIN]) / (RANGE[MAX] - RANGE[MIN]) );
+  }
+  
+  int measure(int m) {
+    int expansion = map(m);
     int new_delta_depth = expansion - depth;
     if ((breathing_out() || holding_breath()) && new_delta_depth > 0) {
       // started to breathe in: this is the start of a new breathing cycle
